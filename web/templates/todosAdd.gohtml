@@ -1,0 +1,14 @@
+{{define "todosAdd"}}
+  <div class="bg-slate-600 rounded p-2">
+    <h2 class="pl-4 text-center">Add To Do</h2>
+    <form hx-swap="afterend" hx-target="#todo-list" hx-post="/todos/" method="POST" action="/todos/" class="grid grid-cols-4" autocomplete="off">
+      <label for="name" class="col-span-4 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:</label>
+      <input type="text" id="name" name="name" class="col-span-3 mr-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="center div">
+      <label for="details" class="col-span-4 block my-2 text-sm font-medium text-gray-900 dark:text-white">Details:</label>
+      <input type="text" id="details" name="details" class="col-span-3 mr-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="absolute position, 5px from left">
+      <button type="submit" class="col-span-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg inline-flex justify-center items-center">
+        <span>Add</span>
+      </button>
+    </form>
+  </div>
+{{end}}

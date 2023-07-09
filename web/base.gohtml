@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTMX + Go Todo list | Your Company</title>
+    <meta name="description" content="Manage your todo list effectively with our interactive and real-time HTMX + Go application.">
+    <link rel="canonical" href="https://dahlton.org">
+    <link rel="stylesheet" href="static/output.css">
+    <script src="https://unpkg.com/htmx.org@1.9.2" integrity="sha384-L6OqL9pRWyyFU3+/bjdSri+iIphTN/bvYyM37tICVyOJkWZLpP2vGn6VUEXgzg6h" crossorigin="anonymous"></script>
+    <meta property="og:title" content="HTMX + Go Todo list | Your Company">
+    <meta property="og:description" content="Manage your todo list effectively with our interactive and real-time HTMX + Go application.">
+    <meta property="og:image" content="https://dahlton.org">
+    <meta property="og:url" content="https://dahlton.org">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@linkinlog">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "HTMX + Go Todo list",
+            "description": "Manage your todo list effectively with our interactive and real-time HTMX + Go application.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Big Company"
+            }
+        }
+    </script>
+</head>
+<body>
+<h3 class="p-7 text-center">HTMX + Go Todo list</h3>
+<main class="grid grid-cols-4 gap-2 mx-2">
+    {{template "content" .}}
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{{ define "todone" }}
+<div class="my-2 bg-black rounded-lg p-2 grid grid-cols-4">
+    <div class="col-span-3">
+        <p class="bg-slate-600 rounded py-1 px-2 mb-2 text-sm ">Name: {{ .Name }}</p>
+        <p class="bg-slate-600 rounded py-1 px-2 text-sm">Details: {{ .Details }}</p>
+    </div>
+    <form method="POST" action="/todos/{{ .Id }}" hx-post="/todos/{{ .Id }}" hx-swap="innerHTML" hx-target="#todos-wrapper" class="col-span-1 flex justify-center px-2">
+        <input type="hidden" name="_method" value="DELETE" readonly>
+        <button type="submit" class="text-sm bg-red-800 hover:bg-red-400 text-white font-bold py-2 px-3 rounded-lg inline-flex self-center">
+            <span>Delete</span>
+        </button>
+    </form>
+</div>
+{{ end }}
